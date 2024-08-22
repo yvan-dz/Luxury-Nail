@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+
 </head>
 <body>
     <!-- Navbar -->
@@ -293,5 +297,58 @@
             showTestimonial(testimonialIndex + n);
         }
     </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+    
+    <script>
+      // Configuration de Firebase Web SDK
+      const firebaseConfig = {
+        apiKey: "your-api-key",
+        authDomain: "your-auth-domain",
+        projectId: "nails-bc51a",
+        storageBucket: "your-storage-bucket",
+        messagingSenderId: "your-messaging-sender-id",
+        appId: "your-app-id",
+        measurementId: "your-measurement-id"
+      };
+    
+      // Initialiser Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    
+      // Exemple de lecture de Firestore
+      db.collection('reservations').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+          console.log(doc.data());
+        });
+      });
+    </script>
+    
+<script src="booking.js"></script>
+
+<div class="modal" id="usernameModal" tabindex="-1" aria-labelledby="usernameModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="usernameModalLabel">Enter Your Username</h5>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="usernameInput" class="form-control" placeholder="Username">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="saveUsernameBtn" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
