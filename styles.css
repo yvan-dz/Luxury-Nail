@@ -80,12 +80,14 @@ body {
     letter-spacing: 3px;
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease-in-out;
+    text-align: center;
 }
 
 .hero-section p {
     font-size: 1.7rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1.2s ease-in-out;
+    text-align: center;
 }
 
 .hero-section .btn {
@@ -262,6 +264,7 @@ body {
 .gallery-item:hover .gallery-caption {
     opacity: 1;
 }
+
 /* Founder Section */
 #founder {
     background: linear-gradient(135deg, #ffebf0, #fffafc);
@@ -385,7 +388,6 @@ body {
     color: #fff;
     border-color: #333;
 }
-
 
 /* Testimonials Section */
 .testimonial-slider {
@@ -556,6 +558,19 @@ body {
     .navbar-nav li {
         margin-bottom: 10px;
     }
+    #founder .row {
+        flex-direction: column;
+    }
+
+    #founder img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
@@ -592,4 +607,33 @@ body {
     .footer {
         padding: 20px 0;
     }
+
+    .testimonial-slider {
+        padding: 20px 10px;
+    }
+
+    #founder .row {
+        flex-direction: column;
+    }
+
+    #founder img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 }
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.navbar-nav li {
+    margin-bottom: 10px;
+}
+
