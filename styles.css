@@ -262,63 +262,130 @@ body {
 .gallery-item:hover .gallery-caption {
     opacity: 1;
 }
-
 /* Founder Section */
 #founder {
-    background-color: #fff7f7;
+    background: linear-gradient(135deg, #ffebf0, #fffafc);
     padding: 100px 0;
     text-align: center;
 }
 
-#founder .row {
-    align-items: center;
+#founder h2 {
+    font-size: 2.7rem;
+    color: #ff6b81;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    position: relative;
 }
 
-#founder img {
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+#founder h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff4757;
+    margin: 20px auto 0;
+    border-radius: 50px;
+}
+
+.founder-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s, box-shadow 0.4s;
 }
 
-#founder img:hover {
+.founder-image-wrapper:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-#founder h4 {
-    font-size: 2.2rem;
+.founder-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+    border-radius: 20px;
+}
+
+.founder-image-wrapper:hover .founder-image-overlay {
+    opacity: 1;
+}
+
+.founder-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+.founder-info {
+    text-align: left;
+}
+
+.founder-info h3 {
+    font-size: 2.4rem;
+    color: #ff4757;
+    margin-bottom: 10px;
+}
+
+.founder-info .lead {
+    font-size: 1.3rem;
     color: #ff6b81;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-#founder p {
+.founder-info p {
     font-size: 1.1rem;
-    color: #555;
+    color: #666;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
 
-#founder ul {
+.founder-info ul {
     list-style-type: none;
     padding: 0;
 }
 
-#founder ul li {
-    font-size: 1rem;
+.founder-info ul li {
+    font-size: 1.1rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
-#founder ul li i {
+.founder-info ul li i {
     color: #ff6b81;
     margin-right: 10px;
 }
 
-#founder a.btn-success {
+.founder-info a.btn-outline-dark {
     border-radius: 50px;
     font-size: 1.1rem;
     padding: 0.6rem 1.2rem;
+    color: #333;
+    border: 2px solid #333;
+    transition: all 0.4s ease;
 }
+
+.founder-info a.btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
 
 /* Testimonials Section */
 .testimonial-slider {

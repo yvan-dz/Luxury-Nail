@@ -9,19 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
-
-    <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
-
-    <!-- Firebase Auth SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
     
-    <!-- Firebase Firestore SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
-
 </head>
 <body>
     <!-- Navbar -->
@@ -36,7 +24,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#founder">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -187,29 +175,37 @@
         </div>
     </section>
 
-     <!-- About Section (Founder) -->
-     <section id="founder" class="content-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Meet the Founder</h2>
-            <div class="row align-items-center mt-4">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <!-- About Section (Founder) -->
+<section id="founder" class="content-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center" data-aos="fade-up">Meet the Founder</h2>
+        <div class="row align-items-center mt-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="founder-image-wrapper">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Founder Image">
+                    <div class="founder-image-overlay">
+                        <p class="founder-quote">"Beauty is in the details."</p>
+                    </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Jane Doe</h4>
-                    <p>With over a decade of experience in the beauty industry, Jane Doe is the heart and soul behind Nail Artistry. Her passion for creating stunning nail designs, combined with her dedication to providing top-notch service, has made her one of the most sought-after nail artists in the region.</p>
-                    <p>Jane believes in continuous learning and innovation, constantly updating her skills to offer the latest trends and techniques in nail artistry. Her attention to detail and commitment to excellence ensures that every client leaves the salon feeling pampered and delighted with their nails.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="founder-info">
+                    <h3>Jane Doe</h3>
+                    <p class="lead">Founder & Master Nail Artist</p>
+                    <p>With over a decade of experience in the beauty industry, Jane Doe is the creative force behind Nail Artistry. Known for her innovative designs and commitment to excellence, Jane has set a new standard in luxury nail care.</p>
+                    <p>Her attention to detail and dedication to customer satisfaction have made her one of the most sought-after nail artists in the region. Jane continuously evolves her craft, staying ahead of trends and offering clients the latest in nail artistry.</p>
                     <p><strong>Specialties:</strong> Luxury Manicure, Creative Nail Art, Spa Pedicure.</p>
                     <p><strong>Contact:</strong></p>
                     <ul class="list-unstyled">
                         <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope"></i> jane@nailartistry.com</li>
-                        <li><a href="https://wa.me/1234567890" target="_blank" class="btn btn-success btn-sm mt-2"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></li>
+                        <li><a href="https://wa.me/1234567890" target="_blank" class="btn btn-outline-dark btn-sm mt-2"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -276,19 +272,7 @@
     <script>
         AOS.init();
 
-        // Calendar initialization
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: [
-                    { title: 'Available', start: '2024-09-29', end: '2024-09-30' },
-                    { title: 'Available', start: '2024-10-03' },
-                    // Add more available dates as needed
-                ]
-            });
-            calendar.render();
-        });
+        
 
         // Testimonial slider script
         let testimonialIndex = 0;
@@ -307,89 +291,10 @@
         }
     </script>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
-
-
-
-
-
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBD9qK_e5HiU3DT_80YVLs9Sux_g6lWp6A",
-    authDomain: "nails-bc51a.firebaseapp.com",
-    projectId: "nails-bc51a",
-    storageBucket: "nails-bc51a.appspot.com",
-    messagingSenderId: "96414301953",
-    appId: "1:96414301953:web:6effbbd0d91c71d2556500",
-    measurementId: "G-N2CJZQLFY6"
-  };
-
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-
-  // Functionality to handle anonymous login and Firestore operations
-  document.addEventListener('DOMContentLoaded', function () {
-    const usernameModal = new bootstrap.Modal(document.getElementById('usernameModal'));
-    const saveUsernameBtn = document.getElementById('saveUsernameBtn');
-    const usernameInput = document.getElementById('usernameInput');
-
-    // Show modal on page load
-    usernameModal.show();
-
-    saveUsernameBtn.addEventListener('click', function() {
-      const username = usernameInput.value.trim();
-      if (username) {
-        // Sign in anonymously
-        auth.signInAnonymously()
-          .then((userCredential) => {
-            const user = userCredential.user;
-
-            // Save the username in Firestore
-            return db.collection('users').doc(user.uid).set({
-              username: username
-            });
-          })
-          .then(() => {
-            // Hide the modal
-            usernameModal.hide();
-
-            console.log(`User signed in as: ${username}`);
-          })
-          .catch((error) => {
-            console.error("Error signing in anonymously or saving username:", error);
-          });
-      } else {
-        alert("Please enter a username.");
-      }
-    });
-  });
-</script>
-
     
-<script type="module" src="booking.js"></script>
 
-<div class="modal" id="usernameModal" tabindex="-1" aria-labelledby="usernameModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="usernameModalLabel">Enter Your Username</h5>
-      </div>
-      <div class="modal-body">
-        <input type="text" id="usernameInput" class="form-control" placeholder="Username">
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="saveUsernameBtn" class="btn btn-primary">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
 </body>
 </html>

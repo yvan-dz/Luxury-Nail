@@ -88,32 +88,47 @@ body {
     margin-top: 30px;
 }
 
+/* Form Fields */
 .booking-container .form-control {
     margin-bottom: 20px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 50px;
     border: 1px solid #ddd;
-    transition: border-color 0.4s ease;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.4s ease;
 }
 
 .booking-container .form-control:focus {
     border-color: #ff6b81;
     outline: none;
-    box-shadow: 0 0 5px rgba(255, 107, 129, 0.5);
+    box-shadow: 0 0 10px rgba(255, 107, 129, 0.3);
+    background-color: #fff;
 }
 
+.booking-container .form-control::placeholder {
+    color: #aaa;
+    font-weight: 300;
+}
+
+/* Button */
 .booking-container .btn-primary {
-    padding: 10px 30px;
-    background-color: #ff6b81;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
     border: none;
     color: #fff;
     border-radius: 50px;
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 15px rgba(255, 107, 129, 0.3);
 }
 
 .booking-container .btn-primary:hover {
     background-color: #ff4757;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(255, 107, 129, 0.4);
 }
 
 /* Calendar */
@@ -222,4 +237,95 @@ body {
     #calendar {
         height: 350px;
     }
+}
+/* Form Fields */
+#bookingForm .form-control {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ffb3c1; /* Light pink border */
+    background-color: #e1ebf4; /* Light pastel pink background */
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#bookingForm .form-control:focus {
+    border-color: #ff6b81; /* Darker pink border on focus */
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 107, 129, 0.4);
+    background-color: #fffafa; /* Slightly lighter pink on focus */
+}
+
+#bookingForm .form-control::placeholder {
+    color: #ff9aa2; /* Soft pink placeholder text */
+    font-weight: 300;
+}
+
+/* Form Icons for Date and Time Pickers */
+#bookingForm .form-control[type="date"],
+#bookingForm .form-control[type="time"],
+#bookingForm select.form-control {
+    padding-right: 50px;
+    color: #ff6b81; /* Add color to text */
+}
+
+#bookingForm .form-control[type="date"]::-webkit-calendar-picker-indicator,
+#bookingForm .form-control[type="time"]::-webkit-calendar-picker-indicator {
+    color: #ff6b81; /* Darker pink for icons */
+    cursor: pointer;
+}
+
+/* Submit Button */
+#bookingForm .btn-primary {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #ff6b81, #ff4757); /* Pink to coral gradient */
+    border: none;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 15px rgba(255, 107, 129, 0.4);
+}
+
+#bookingForm .btn-primary:hover {
+    background: linear-gradient(135deg, #ff4757, #ff6b81); /* Reverse the gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(255, 107, 129, 0.5);
+}
+
+/* Info Alert */
+.alert-info {
+    background-color: #bdedf9; /* Light pink background for alert */
+    border-color: #ff6b81;
+    color: #ff4757; /* Coral text color */
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-info .fas {
+    margin-right: 10px;
+    color: #ff6b81; /* Darker pink for icons */
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+    #bookingForm .form-control {
+        padding: 12px 18px;
+    }
+
+    #bookingForm .btn-primary {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
