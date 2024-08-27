@@ -1,20 +1,31 @@
 /* Global Styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff7f7;
-    color: #333;
+    background-color: #0a0a0a; /* Darker background for a luxurious feel */
+    color: #f1c40f; /* Gold Color */
     line-height: 1.7;
     overflow-x: hidden;
     padding-top: 100px; /* Ensures content is below the fixed navbar */
 }
 
+#booking{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Darker background for a luxurious feel */
+    color: #f1c40f; /* Gold Color */
+    line-height: 1.7;
+    overflow-x: hidden;
+    padding-top: 100px; /* Ensures content is below the fixed navbar */
+}
 /* Navbar */
 .navbar {
-    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    background: linear-gradient(135deg, #000000, #f1c40f); /* Black to Gold */
     padding: 15px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -22,16 +33,20 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 700;
-    color: #fff;
+    color: #f1c40f; /* Gold */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+nav .container{
+    max-width: 100px;
+}
+
 .nav-link {
     font-weight: 600;
-    color: #fff;
+    color: #f1c40f; /* Gold */
     transition: color 0.4s ease;
     text-decoration: none;
     font-size: 1.1rem;
@@ -46,7 +61,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffcccc;
+    background-color: #cfae70; /* Light Gold */
     transition: width 0.4s;
 }
 
@@ -55,7 +70,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ffcccc;
+    color: #cfae70; /* Light Gold */
 }
 
 /* Booking Container */
@@ -63,23 +78,23 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 40px;
-    background-color: #fff;
+    background-color: #333333; /* Dark Gray */
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
     animation: fadeInUp 0.8s ease-in-out;
 }
 
 .booking-container h2 {
     font-size: 2.5rem;
-    color: #ff6b81;
+    color: #f1c40f; /* Gold */
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .booking-container p {
     font-size: 1.2rem;
-    color: #555;
+    color: #dcdcdc; /* Light Gray */
     margin-bottom: 40px;
 }
 
@@ -93,42 +108,42 @@ body {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 50px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    border: 1px solid #cfae70; /* Light Gold */
+    background-color: #444444; /* Darker Gray */
     font-size: 1rem;
-    color: #333;
+    color: #f1c40f; /* Gold */
     transition: all 0.4s ease;
 }
 
 .booking-container .form-control:focus {
-    border-color: #ff6b81;
+    border-color: #f1c40f; /* Gold */
     outline: none;
-    box-shadow: 0 0 10px rgba(255, 107, 129, 0.3);
-    background-color: #fff;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5); /* Gold shadow */
+    background-color: #2c2c2c; /* Slightly Lighter Gray */
 }
 
 .booking-container .form-control::placeholder {
-    color: #aaa;
+    color: #bfbfbf; /* Light Gray Placeholder */
     font-weight: 300;
 }
 
 /* Button */
 .booking-container .btn-primary {
     padding: 15px 40px;
-    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    background: linear-gradient(135deg, #000000, #f1c40f); /* Black to Gold Gradient */
     border: none;
-    color: #fff;
+    color: #ffffff;
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 15px rgba(255, 107, 129, 0.3);
+    box-shadow: 0 8px 15px rgba(241, 196, 15, 0.5); /* Gold Shadow */
 }
 
 .booking-container .btn-primary:hover {
-    background-color: #ff4757;
+    background: linear-gradient(135deg, #f1c40f, #000000); /* Gold to Black Gradient */
     transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(255, 107, 129, 0.4);
+    box-shadow: 0 12px 20px rgba(241, 196, 15, 0.6); /* Stronger Gold Shadow */
 }
 
 /* Calendar */
@@ -136,14 +151,14 @@ body {
     height: 600px;
     max-height: 600px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
 
 /* Footer */
 .footer {
-    background: #ff6b81;
-    color: #fff;
+    background: #000000; /* Black */
+    color: #f1c40f; /* Gold */
     padding: 30px 0;
     text-align: center;
 }
@@ -154,36 +169,38 @@ body {
 }
 
 .footer p a {
-    color: #9ee1ed;
+    color: #cfae70; /* Light Gold */
     text-decoration: none;
     transition: color 0.4s ease;
 }
 
 .footer p a:hover {
-    color: #ff4757;
+    color: #f1c40f; /* Gold */
 }
 
 /* Info Alert */
 .alert-info {
-    background-color: #9ee1ed;
-    border-color: #ff6b81;
-    color: #ff6b81;
+    background-color: #444444; /* Dark Gray Background */
+    border-color: #f1c40f; /* Gold Border */
+    color: #f1c40f; /* Gold Text */
     font-size: 1.1rem;
     border-radius: 10px;
     padding: 20px;
     text-align: left;
     margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .alert-info .fas {
     margin-right: 10px;
+    color: #f1c40f; /* Gold Icon */
 }
 
 /* Introductory Lead Text */
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
-    color: #333;
+    color: #dcdcdc; /* Light Gray */
 }
 
 /* Animations */
@@ -238,28 +255,29 @@ body {
         height: 350px;
     }
 }
+
 /* Form Fields */
 #bookingForm .form-control {
     margin-bottom: 20px;
     padding: 15px 20px;
     border-radius: 30px;
-    border: 1px solid #ffb3c1; /* Light pink border */
-    background-color: #e1ebf4; /* Light pastel pink background */
+    border: 1px solid #cfae70; /* Light Gold Border */
+    background-color: #2c2c2c; /* Darker Gray Background */
     font-size: 1rem;
-    color: #333;
+    color: #f1c40f; /* Gold Text */
     transition: all 0.4s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #bookingForm .form-control:focus {
-    border-color: #ff6b81; /* Darker pink border on focus */
+    border-color: #f1c40f; /* Gold Border on Focus */
     outline: none;
-    box-shadow: 0 0 10px rgba(255, 107, 129, 0.4);
-    background-color: #fffafa; /* Slightly lighter pink on focus */
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5); /* Gold Shadow on Focus */
+    background-color: #333333; /* Dark Gray on Focus */
 }
 
 #bookingForm .form-control::placeholder {
-    color: #ff9aa2; /* Soft pink placeholder text */
+    color: #bfbfbf; /* Light Gray Placeholder */
     font-weight: 300;
 }
 
@@ -268,50 +286,32 @@ body {
 #bookingForm .form-control[type="time"],
 #bookingForm select.form-control {
     padding-right: 50px;
-    color: #ff6b81; /* Add color to text */
+    color: #f1c40f; /* Gold Text */
 }
 
 #bookingForm .form-control[type="date"]::-webkit-calendar-picker-indicator,
 #bookingForm .form-control[type="time"]::-webkit-calendar-picker-indicator {
-    color: #ff6b81; /* Darker pink for icons */
+    color: #f1c40f; /* Gold Icon */
     cursor: pointer;
 }
 
 /* Submit Button */
 #bookingForm .btn-primary {
     padding: 15px 40px;
-    background: linear-gradient(135deg, #ff6b81, #ff4757); /* Pink to coral gradient */
+    background: linear-gradient(135deg, #000000, #f1c40f); /* Black to Gold Gradient */
     border: none;
     color: #ffffff;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 15px rgba(255, 107, 129, 0.4);
+    box-shadow: 0 8px 15px rgba(241, 196, 15, 0.5); /* Gold Shadow */
 }
 
 #bookingForm .btn-primary:hover {
-    background: linear-gradient(135deg, #ff4757, #ff6b81); /* Reverse the gradient on hover */
+    background: linear-gradient(135deg, #f1c40f, #000000); /* Gold to Black Gradient */
     transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(255, 107, 129, 0.5);
-}
-
-/* Info Alert */
-.alert-info {
-    background-color: #bdedf9; /* Light pink background for alert */
-    border-color: #ff6b81;
-    color: #ff4757; /* Coral text color */
-    font-size: 1.1rem;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    margin-top: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.alert-info .fas {
-    margin-right: 10px;
-    color: #ff6b81; /* Darker pink for icons */
+    box-shadow: 0 12px 20px rgba(241, 196, 15, 0.6); /* Stronger Gold Shadow */
 }
 
 /* Media Queries */
@@ -329,3 +329,34 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* Booking Container */
+.booking-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #333333; /* Dark Gray */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.booking-container h2 {
+    font-size: 2.5rem;
+    color: #f1c40f; /* Gold for the title */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Calendar */
+#calendar {
+    height: 600px;
+    max-height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    background-color: #1a1a1a; /* Dark background for calendar */
+}
+
