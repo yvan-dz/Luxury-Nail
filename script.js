@@ -9,7 +9,7 @@ function showTestimonial(n) {
             testimonial.classList.add('active');
         }
     });
-}
+} 
 
 function changeTestimonial(n) {
     showTestimonial(testimonialIndex + n);
