@@ -8,8 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Lightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+
+<!-- Lightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
    
-    <link rel="stylesheet" href="booking.css">
+    
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -146,38 +152,53 @@
 </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Our Creations</h2>
-            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Explore our latest designs and get inspired for your next appointment.</p>
-            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="gallery-item" onclick="openModal(0)">
+<section id="gallery" class="gallery-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center" data-aos="fade-up">Our Creations</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Explore our latest designs and get inspired for your next appointment.</p>
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 1">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 1">
-                    <div class="gallery-caption">Elegant Design 1</div>
-                </div>
-                <div class="gallery-item" onclick="openModal(1)">
+                </a>
+                <div class="gallery-caption">Elegant Design 1</div>
+            </div>
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 2">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 2">
-                    <div class="gallery-caption">Elegant Design 2</div>
-                </div>
-                <div class="gallery-item" onclick="openModal(2)">
+                </a>
+                <div class="gallery-caption">Elegant Design 2</div>
+            </div>
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 3">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 3">
-                    <div class="gallery-caption">Elegant Design 3</div>
-                </div>
-                <div class="gallery-item" onclick="openModal(3)">
+                </a>
+                <div class="gallery-caption">Elegant Design 3</div>
+            </div>
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 4">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 4">
-                    <div class="gallery-caption">Elegant Design 4</div>
-                </div>
-                <div class="gallery-item" onclick="openModal(4)">
+                </a>
+                <div class="gallery-caption">Elegant Design 4</div>
+            </div>
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 5">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 5">
-                    <div class="gallery-caption">Elegant Design 5</div>
-                </div>
-                <div class="gallery-item" onclick="openModal(5)">
+                </a>
+                <div class="gallery-caption">Elegant Design 5</div>
+            </div>
+            <div class="gallery-item">
+                <a href="https://via.placeholder.com/1200x800" data-lightbox="gallery" data-title="Elegant Design 6">
                     <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Nail Art 6">
-                    <div class="gallery-caption">Elegant Design 6</div>
-                </div>
+                </a>
+                <div class="gallery-caption">Elegant Design 6</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
 
   <!-- About Section (Founder) -->
 <section id="founder" class="content-section py-5 bg-light">
@@ -237,6 +258,45 @@
         </div>
     </section>
 
+
+    <!-- Comments Section -->
+    <section id="comments" class="comments-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Leave a Comment</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">We value your feedback. Please leave a comment and rate your experience with us.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="commentForm" class="mb-5" data-aos="fade-up" data-aos-delay="200" onsubmit="submitComment(event)">
+                        <div class="mb-3">
+                            <input type="text" id="userName" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea id="userComment" class="form-control" rows="4" placeholder="Your Comment" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userRating" class="form-label">Rating:</label>
+                            <div id="starRating" class="d-flex">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="userRating" name="userRating" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Submit Comment</button>
+                    </form>
+
+                    <div id="commentsList">
+                        <!-- User comments will be appended here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Contact Section -->
     <section id="contact" class="content-section py-5">
         <div class="container">
@@ -261,50 +321,34 @@
     <footer class="footer py-3">
         <div class="container text-center">
             <p>&copy; 2024 Nail Artistry. All Rights Reserved.</p>
-            <p>Designed by <a href="https://github.com/yvan-dz" target="_blank">Yvan Dzefak</a></p>
+            <p>Designed by <a href="https://websnape.de/" target="_blank">WebSnape by Yvan</a></p>
         </div>
     </footer>
 
   
 
+<!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
-
-    <script>
-        AOS.init();
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function() {
-        if (window.innerWidth <= 992) {
-            document.querySelector('.navbar-collapse').classList.remove('show');
-        }
-    });
-});
-
-
-        // Testimonial slider script
-        let testimonialIndex = 0;
-        function showTestimonial(n) {
-            const testimonials = document.querySelectorAll('.testimonial');
-            testimonialIndex = (n + testimonials.length) % testimonials.length;
-            testimonials.forEach((testimonial, index) => {
-                testimonial.classList.remove('active');
-                if (index === testimonialIndex) {
-                    testimonial.classList.add('active');
-                }
-            });
-        }
-        function changeTestimonial(n) {
-            showTestimonial(testimonialIndex + n);
-        }
-    </script>
-
     
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    
+    <!-- Firebase JS SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js" type="module"></script>
 
 
-0
+
 
 </body>
 </html>

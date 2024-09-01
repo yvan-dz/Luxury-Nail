@@ -9,7 +9,7 @@
     <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Load custom styles -->
-    <link rel="stylesheet" href="styles.css">
+   
     <link rel="stylesheet" href="booking.css">
     
 </head>
@@ -39,8 +39,8 @@
     <section id="booking" class="content-section py-5 bg-light">
         <div class="container">
             <h2 class="text-center" id="service-title" data-aos="fade-up">Book Your Appointment</h2>
-            <p class="text-center lead mb-5" data-aos="fade-up" data-aos-delay="100">
-                Welcome to the booking page of Nail Artistry. Here, you can schedule your appointment at your convenience. Whether it's a luxurious manicure, creative nail art, or a relaxing spa pedicure, we're excited to pamper you with the best care. Secure your slot today!
+            <p class="text-center lead mb-5" data-aos="fade-up" data-aos-delay="100" id="intro">
+                Welcome to the booking page of <strong>Nail Artistry</strong>. Here, you can schedule your appointment at your convenience. Whether it's a <strong>luxurious manicure</strong>, <strong>creative nail art</strong>, or a <strong>relaxing spa pedicure</strong>, we're excited to pamper you with the best care. <strong>Secure your slot today!</strong>
             </p>
             
             <div class="row justify-content-center">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <form id="bookingForm" data-aos="fade-up" data-aos-delay="300" onsubmit="generateGoogleCalendarLink(event)">
+                    <form id="bookingForm" data-aos="fade-up" data-aos-delay="300" onsubmit="redirectToPayPal(event)">
                         <div class="mb-3">
                             <input type="text" id="userName" class="form-control" placeholder="Your Name" required>
                         </div>
@@ -70,15 +70,14 @@
                         <div class="mb-3">
                             <select id="selectedService" class="form-control" required>
                                 <option value="" disabled selected>Select Service</option>
-                                <option>Manucure résine sur capsule</option>
-                                <option>Manucure résine sur ongles naturels</option>
-                                <option>Manucure semi permanent sur ongles naturels</option>
-                                <option>Pédicure soin intégral + Résine</option>
-                                <option>Pédicure simple + résine</option>
-                                <option>Pédicure simple + semi permanent</option>
-                                <option>Remplissage</option>
+                                <option value="30">Manucure résine sur capsule - 30€</option>
+                                <option value="25">Manucure résine sur ongles naturels - 25€</option>
+                                <option value="15">Manucure semi permanent sur ongles naturels - 15€</option>
+                                <option value="35">Pédicure soin intégral + Résine - 35€</option>
+                                <option value="30">Pédicure simple + résine - 30€</option>
+                                <option value="20">Pédicure simple + semi permanent - 20€</option>
+                                <option value="20">Remplissage - 20€</option>
                             </select>
-                            
                         </div>
                         <button id="bookNowBtn" class="btn btn-primary btn-lg w-100 mt-4" type="submit">Book Now</button>
                     </form>
@@ -140,6 +139,23 @@
 
             // Redirect the user to the Google Calendar event creation page
             window.open(googleCalendarUrl, '_blank');
+        }
+    </script>
+
+    <!-- Scripts -->
+    <script>
+        function redirectToPayPal(event) {
+            event.preventDefault();
+            
+            const servicePrice = document.getElementById('selectedService').value;
+
+            if (servicePrice) {
+                // Redirect to PayPal.me with the appropriate amount
+                const paypalUrl = `https://www.paypal.me/YvanDzefak/${servicePrice}`;
+                window.location.href = paypalUrl;
+            } else {
+                alert('Please select a service to book.');
+            }
         }
     </script>
     
