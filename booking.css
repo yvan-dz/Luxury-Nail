@@ -18,6 +18,7 @@ body {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.4s ease-in-out;
+    padding-right: 350px;
 }
 
 .navbar-brand {
@@ -262,6 +263,16 @@ body {
 }
 
 @media (max-width: 576px) {
+     /* Navbar adjustments */
+     .navbar {
+        padding: 8px 15px;
+        width: 100%;
+        padding-right: 70%;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
     #intro{
         font-size: 18px;
     }
