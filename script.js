@@ -44,10 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
     loadComments();
 });
 
-// Testimonial Slider Functions
+//Testimonials
+
 function initTestimonialSlider() {
     let testimonialIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial-item');
+    const testimonials = document.querySelectorAll('.testimonial');
     const totalTestimonials = testimonials.length;
 
     function showTestimonial(index) {
@@ -64,8 +65,9 @@ function initTestimonialSlider() {
     // Auto-slide every 5 seconds
     setInterval(() => {
         changeTestimonial(1);
-    }, 5000);
+    }, 3000);
 }
+
 
 // Star Rating Functions
 function initStarRating() {
